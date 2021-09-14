@@ -4659,13 +4659,13 @@ metadata:
   labels:
     app: jaeger
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - name: http-query
       port: 80
       protocol: TCP
       targetPort: 16686
-      nodePort: 31001
+      #nodePort: 31001
   selector:
     app: jaeger
 ---
